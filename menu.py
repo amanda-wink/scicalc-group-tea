@@ -107,7 +107,8 @@ def scientific(path):
     print("Scientific Operations")
     operation3 = input(" [1] Sine \n [2] Cosine \n [3] Tangent \n "
                        "[4] Inverse Sine \n [5] Inverse Cosine \n "
-                       "[6] Inverse Tangent \n [7] Back \n")
+                       "[6] Inverse Tangent \n "
+                       "[7] Switch Trig Units List \n [8] Back \n")
     path.append(operation3)
     if operation3 == "1":
         a = main_app.getOneNumber()
@@ -128,6 +129,8 @@ def scientific(path):
         a = main_app.getOneNumber()
         main_app.displayResult(calc.inverse_tan(a))
     elif operation3 == "7":
+        switch_mode.switch_units_input(main_app.mode_ang)
+    elif operation3 == "8":
         back(path)
     else:
         print("Enter a valid input.")
@@ -138,8 +141,7 @@ def complex(path):
                        "[3] Inverse Logarithm \n "
                        "[4] Natural Logarithm  \n "
                        "[5] Inverse Natural Logarithm \n "
-                       "[6] Switch Trig Units List \n "
-                       "[7] Back \n")
+                       "[6] Back \n")
     path.append(operation4)
     if operation4 == "1":
         a = main_app.getOneNumber()
@@ -157,8 +159,6 @@ def complex(path):
         a = main_app.getOneNumber()
         main_app.displayResult(calc.inlog(a))
     elif operation4 == "6":
-        switch_mode.switch_units_input(main_app.mode_ang)
-    elif operation4 == "8":
         back(path)
     else:
         print("Enter a valid input.")
