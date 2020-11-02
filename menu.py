@@ -121,13 +121,13 @@ def scientific(path):
         main_app.displayResult(calc.tangent(a,  main_app.mode_ang))
     elif operation3 == "4":
         a = main_app.getOneNumber()
-        main_app.displayResult(calc.inverse_sine(a))
+        main_app.displayResult(calc.inverse_sine(a, main_app.mode_ang))
     elif operation3 == "5":
         a = main_app.getOneNumber()
-        main_app.displayResult(calc.inverse_cosine(a))
+        main_app.displayResult(calc.inverse_cosine(a, main_app.mode_ang))
     elif operation3 == "6":
         a = main_app.getOneNumber()
-        main_app.displayResult(calc.inverse_tan(a))
+        main_app.displayResult(calc.inverse_tan(a, main_app.mode_ang))
     elif operation3 == "7":
         switch_mode.switch_units_input(main_app.mode_ang)
     elif operation3 == "8":

@@ -48,7 +48,7 @@ class Calculator:
     def sine(self, x, mode):
         if mode == "degrees":
             x = switch.angle_conversion("radians", x)
-            print("radians: " + str(x))
+            print("radians:" + str(x))
         return float(f"{math.sin(x):0.5}")
 
     def cosine(self, x, mode):
@@ -66,26 +66,29 @@ class Calculator:
     def inverse_sine(self, x, mode):
         if x > 1 or x < -1:
             return Calculator.display_error(self)
-        elif mode == "degrees":
-            x = switch.angle_conversion("radians", x)
-            print("radians: " + str(x))
         else:
-            return float(f"{math.asin(x):0.5}")
+            x_2 = float(f"{math.asin(x):0.5}")
+            if mode == "degrees":
+                x_2 = switch.angle_conversion("degrees", x_2)
+                print("degrees: " + str(x_2))
+            return float(x_2)
 
     def inverse_cosine(self, x, mode):
         if x > 1 or x < -1:
             return Calculator.display_error(self)
-        elif mode == "degrees":
-            x = switch.angle_conversion("radians", x)
-            print("radians: " + str(x))
         else:
-            return float(f"{math.acos(x):0.5}")
+            x_2 = float(f"{math.acos(x):0.5}")
+            if mode == "degrees":
+                x_2 = switch.angle_conversion("degrees", x_2)
+                print("degrees: " + str(x_2))
+            return float(x_2)
 
     def inverse_tan(self, x, mode):
+        x_2 = float(f"{math.atan(x):0.4}")
         if mode == "degrees":
-            x = switch.angle_conversion("radians", x)
-            print("radians: " + str(x))
-        return float(f"{math.atan(x):0.4}")
+            x_2 = switch.angle_conversion("degrees", x_2)
+            print("degrees: " + str(x_2))
+        return float(x_2)
 
     def factorial(self, x):
         if x < 0:

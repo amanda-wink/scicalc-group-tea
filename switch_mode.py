@@ -46,10 +46,10 @@ def switch_units_input(mode):
     new_mode = input("Input a new mode. \n")
     if new_mode == "degrees" or new_mode == "radians":
         print("You have switched to " + new_mode + ".")
-        memory = main_app.m
-        current_value = memory[-1]
-        new_value = angle_conversion(new_mode, current_value)
-        print("Your converted value is " + str(new_value) + ". " + "\n")
+        #memory = main_app.m
+        #current_value = memory[-1]
+        #new_value = angle_conversion(new_mode, current_value)
+        #print("Your converted value is " + str(new_value) + ". " + "\n")
         main_app.mode_ang = new_mode
     else:
         print("That is not a valid mode.")
