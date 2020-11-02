@@ -128,7 +128,7 @@ def scientific(path):
     elif operation3 == "6":
         a = main_app.getOneNumber()
         main_app.displayResult(calc.inverse_tan(a))
-    elif operation4 == "7":
+    elif operation3 == "7":
         switch_mode.switch_units_input(main_app.mode_ang)
     elif operation3 == "8":
         back(path)
